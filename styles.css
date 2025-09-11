@@ -221,6 +221,7 @@ p {
     object-fit: cover;
     object-position: center;
     z-index: -2;
+    filter: brightness(0.6) contrast(0.8);
 }
 
 .hero-overlay {
@@ -229,7 +230,7 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.8) 0%, rgba(139, 92, 246, 0.7) 50%, rgba(6, 182, 212, 0.8) 100%);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.7) 100%);
     z-index: -1;
 }
 
@@ -242,13 +243,16 @@ p {
 .hero-title {
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
-    color: var(--text-primary);
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .hero-subtitle {
     font-size: 1.2rem;
     margin-bottom: 2rem;
-    color: var(--accent-color);
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    opacity: 0.95;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
