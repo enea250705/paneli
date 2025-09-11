@@ -222,6 +222,118 @@ p {
     z-index: -1;
 }
 
+/* Roof House Image */
+.roof-image {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    z-index: 0;
+    animation: float 6s ease-in-out infinite;
+}
+
+.roof-house {
+    position: relative;
+    width: 300px;
+    height: 200px;
+}
+
+.roof-top {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-bottom: 80px solid #8B4513;
+    z-index: 3;
+}
+
+.solar-panels {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    z-index: 4;
+}
+
+.panel {
+    width: 60px;
+    height: 40px;
+    background: linear-gradient(45deg, #1a1a1a 0%, #333 50%, #1a1a1a 100%);
+    border: 2px solid #555;
+    border-radius: 4px;
+    position: relative;
+    animation: solarGlow 3s ease-in-out infinite alternate;
+}
+
+.panel::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    background: linear-gradient(45deg, #0066cc 0%, #00aaff 50%, #0066cc 100%);
+    border-radius: 2px;
+    opacity: 0.8;
+}
+
+.panel-1 { animation-delay: 0s; }
+.panel-2 { animation-delay: 0.5s; }
+.panel-3 { animation-delay: 1s; }
+.panel-4 { animation-delay: 1.5s; }
+
+.house-body {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 120px;
+    background: linear-gradient(180deg, #f0f0f0 0%, #e0e0e0 100%);
+    border: 3px solid #ccc;
+    border-radius: 0 0 10px 10px;
+    z-index: 2;
+}
+
+.house-body::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 40px;
+    background: #8B4513;
+    border-radius: 2px;
+}
+
+.house-body::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    background: #87CEEB;
+    border-radius: 50%;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(-50%) translateY(0px); }
+    50% { transform: translateY(-50%) translateY(-10px); }
+}
+
+@keyframes solarGlow {
+    0% { box-shadow: 0 0 5px rgba(0, 170, 255, 0.3); }
+    100% { box-shadow: 0 0 15px rgba(0, 170, 255, 0.8); }
+}
+
 .hero-content {
     max-width: 800px;
     margin: 0 auto;
@@ -706,6 +818,37 @@ p {
     
     .nav-menu.active {
         left: 0;
+    }
+    
+    /* Mobile roof image adjustments */
+    .roof-image {
+        right: 5%;
+        width: 200px;
+    }
+    
+    .roof-house {
+        width: 200px;
+        height: 140px;
+    }
+    
+    .roof-top {
+        border-left: 100px solid transparent;
+        border-right: 100px solid transparent;
+        border-bottom: 60px solid #8B4513;
+    }
+    
+    .solar-panels {
+        gap: 4px;
+    }
+    
+    .panel {
+        width: 40px;
+        height: 30px;
+    }
+    
+    .house-body {
+        width: 140px;
+        height: 80px;
     }
     
     .nav-menu li {
