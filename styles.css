@@ -281,10 +281,21 @@ p {
     color: var(--text-secondary);
 }
 
+/* Section headers for white backgrounds */
+.services .section-header h2,
+.projects .section-header h2 {
+    color: #000000;
+}
+
+.services .section-header p,
+.projects .section-header p {
+    color: #333333;
+}
+
 /* Services Section */
 .services {
     padding: var(--section-padding);
-    background-color: var(--bg-secondary);
+    background-color: #ffffff;
 }
 
 .services-grid {
@@ -294,13 +305,13 @@ p {
 }
 
 .service-item {
-    background-color: var(--bg-light);
+    background-color: #f8f9fa;
     padding: 2rem;
     border-radius: var(--border-radius);
     text-align: center;
     box-shadow: var(--shadow-light);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid var(--bg-secondary);
+    border: 1px solid #e9ecef;
 }
 
 .service-item:hover {
@@ -326,17 +337,37 @@ p {
 }
 
 .service-item h3 {
-    color: var(--text-primary);
+    color: #000000;
     margin-bottom: 1rem;
 }
 
 .service-item p {
-    color: var(--text-secondary);
+    color: #333333;
+}
+
+.service-item ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.service-item ul li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.service-item ul li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #22c55e;
+    font-weight: bold;
 }
 
 /* About Section */
 .about {
     padding: var(--section-padding);
+    background-color: #000000;
 }
 
 .about-content {
@@ -424,7 +455,7 @@ p {
 /* Projects Section */
 .projects {
     padding: var(--section-padding);
-    background-color: var(--bg-secondary);
+    background-color: #ffffff;
 }
 
 .projects-grid {
@@ -434,12 +465,12 @@ p {
 }
 
 .project-item {
-    background-color: var(--bg-light);
+    background-color: #f8f9fa;
     border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: var(--shadow-light);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid var(--bg-secondary);
+    border: 1px solid #e9ecef;
 }
 
 .project-item:hover {
@@ -483,13 +514,13 @@ p {
 }
 
 .project-info h3 {
-    color: var(--text-primary);
+    color: #000000;
     margin-bottom: 0.5rem;
     font-size: 1.3rem;
 }
 
 .project-info p {
-    color: var(--text-secondary);
+    color: #333333;
     margin-bottom: 1rem;
     font-size: 0.95rem;
 }
@@ -513,6 +544,7 @@ p {
 /* Contact Section */
 .contact {
     padding: var(--section-padding);
+    background-color: #000000;
 }
 
 .contact-content {
@@ -568,10 +600,10 @@ p {
 }
 
 .contact-form {
-    background-color: var(--bg-light);
+    background-color: #111111;
     padding: 2rem;
     border-radius: var(--border-radius);
-    border: 1px solid var(--bg-secondary);
+    border: 1px solid #222222;
 }
 
 .form-row {
@@ -616,14 +648,14 @@ p {
 
 .map-placeholder {
     height: 300px;
-    background-color: var(--bg-light);
+    background-color: #111111;
     border-radius: var(--border-radius);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: var(--text-secondary);
-    border: 1px solid var(--bg-secondary);
+    border: 1px solid #222222;
 }
 
 .map-placeholder i {
